@@ -9,10 +9,25 @@
     <style>  body {
       background-image: url("errormessage.png");
       height: 100vh;
+      transition: background-image 0.5s ease-in-out; /* Optional: Adds a smooth transition effect */
+      background-size: cover; /* Ensures the image covers the entire background */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
+      background-position: center; /* Centers the background image */
     }
     </style>
 </head>
-<body>
+<body class="bg-1">
+ <script>
+        // Function to change the background to an image
+        function changeBackgroundImage() {
+            document.body.style.backgroundImage = "url('greybackground.jpg')"; // Replace with your image path
+        }
+
+        // Set a timer to change the background image after 5 seconds (5000 milliseconds)
+        window.onload = function() {
+            setTimeout(changeBackgroundImage, 5000);
+        };
+    </script>
   <div class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
       <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
